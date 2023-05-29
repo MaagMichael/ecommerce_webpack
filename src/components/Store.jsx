@@ -1,7 +1,15 @@
 import storeItems from "../data/items.json";
+// import {useShoppingCart} from "./context/ShoppingCartContext"
 
 export function Store() {
-  const quantity = 2;
+
+  // const {getItemQuantity,
+  //   increaseCartQuantity,
+  //   decreaseCartQuantity,
+  //   removeFromCart} = useShoppingCart();
+
+  // const quantity = getItemQuantity(id);
+  const quantity = 1;
 
   return (
     <div className="card_section">
@@ -12,7 +20,7 @@ export function Store() {
               key={item.id}
               className="card_container"
               // take object by id(key) of picked item
-              onClick={() => alert("You clicked ID " + item.id)}
+              // onClick={() => alert("You clicked ID " + item.id)}
             >
               {/* images from URL */}
               <img src={item.imgUrl} className="card_image" alt="item" />
@@ -25,16 +33,16 @@ export function Store() {
               {quantity === 0 ? (
                 <button
                   className="card_button"
-                  onClick={() => alert("You clicked button")}
+                  onClick={() => alert("You clicked button Order of id: " + item.id)}
                 >
                   Order here{" "}
                 </button>
               ) : (
                 <div className="card_order">
                   <div>
-                    <button>-</button>
+                    <button onClick={() => alert("You clicked button - of id: " + item.id)}>-</button>
                     <span> {quantity} in cart </span>
-                    <button>+</button>
+                    <button onClick={() => alert("You clicked button + of id: " + item.id)}>+</button>
                   </div>
                   <div>
                     <button>Remove</button>

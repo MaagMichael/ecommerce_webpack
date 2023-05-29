@@ -6,11 +6,12 @@ import {NavBar} from "./components/NavBar";
 import {Home} from "./components/Home";
 import { Store } from "./components/Store"
 import { About } from "./components/About"
+import {ShoppingCartProvider} from "./context/ShoppingCartContext"
 
 function App() {
 
   return (
-    <>
+    <ShoppingCartProvider>
       <Router>
         <NavBar />
         <Routes>
@@ -20,7 +21,7 @@ function App() {
         </Routes>
         
       </Router>
-    </>
+    </ShoppingCartProvider>
   );
 }
 
