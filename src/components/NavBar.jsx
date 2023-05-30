@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useShoppingCart } from "../context/ShoppingCartContext";
 
 export function NavBar() {
+  // console.log(cartItems);
+
   return (
     <nav>
       <Link to="/">Home</Link>
@@ -18,6 +21,8 @@ export function NavBar() {
         </svg>
         <div className="cart_quantity">3</div>
       </button>
+
+      {/* <p>{cartQuantity}</p> */}
     </nav>
   );
 }
