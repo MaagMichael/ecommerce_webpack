@@ -40,10 +40,10 @@ export function ShoppingCartProvider({ children }) {
   //   []
   // )
 
-  // const cartQuantity = cartItems.reduce(
-  //   (quantity, item) => item.quantity + quantity,
-  //   0
-  // )
+  const cartQuantity = cartItems.reduce(
+    (quantity, item) => item.quantity + quantity,
+    0
+  )
 
   // const openCart = () => setIsOpen(true)
   // const closeCart = () => setIsOpen(false)
@@ -102,7 +102,7 @@ export function ShoppingCartProvider({ children }) {
         // openCart,
         // closeCart,
         // cartItems,
-        // cartQuantity,
+        cartQuantity,
       }}
     >
       {children}
