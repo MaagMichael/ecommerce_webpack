@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 
 export function NavBar() {
-
+  
   const {
-    cartQuantity
+    cartQuantity,
+    isOpen, setIsOpen,
   } = useShoppingCart();
 
   return (
@@ -14,7 +15,7 @@ export function NavBar() {
       <Link to="/store">Store</Link>
       <Link to="/about">About</Link>
 
-      <button>
+      <button onClick={()=> setIsOpen(!isOpen)}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 576 512"
@@ -24,6 +25,7 @@ export function NavBar() {
         </svg>
         <div className="cart_quantity"> {cartQuantity}</div>
       </button>
+        {isOpen ? (<h1>open</h1>) : null} 
     </nav>
   );
 }

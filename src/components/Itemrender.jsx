@@ -1,5 +1,6 @@
 import { useShoppingCart } from "../context/ShoppingCartContext";
 
+
 export function Itemrender(item) {
   // console.log(item);
   
@@ -64,6 +65,9 @@ export function Itemrender(item) {
           </div>
         </div>
       )}
+
+
+    
     </div>
   );
 }

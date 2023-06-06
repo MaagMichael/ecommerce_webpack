@@ -32,7 +32,7 @@ export function useShoppingCart() {
 // export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
 export function ShoppingCartProvider({ children }) {
   
-  // const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
   const [cartItems, setCartItems] = useState([]);
 
   // const [cartItems, setCartItems] = useLocalStorage<CartItem[]>(
@@ -45,8 +45,8 @@ export function ShoppingCartProvider({ children }) {
     0
   )
 
-  // const openCart = () => setIsOpen(true)
-  // const closeCart = () => setIsOpen(false)
+  const openCart = () => setIsOpen(true)
+  const closeCart = () => setIsOpen(false)
 
   function getItemQuantity(id) {
     return cartItems.find(item => item.id === id)?.quantity || 0
@@ -99,10 +99,11 @@ export function ShoppingCartProvider({ children }) {
         increaseCartQuantity,
         decreaseCartQuantity,
         removeFromCart,
-        // openCart,
-        // closeCart,
-        // cartItems,
+        openCart,
+        closeCart,
+        cartItems,
         cartQuantity,
+        isOpen, setIsOpen,
       }}
     >
       {children}
