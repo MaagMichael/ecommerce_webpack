@@ -6,7 +6,9 @@ export function Modal(props) {
     <div>
       
       {props.items &&
-      props.items.map((item) => {
+      props.items
+      .sort((a, b) => a.id - b.id)
+      .map((item) => {
         return <p>
           {/* {console.log(item)} */}
           {item.id} in Menge {item.quantity}

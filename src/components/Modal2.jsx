@@ -10,7 +10,9 @@ export function Modal2() {
   return (
     <div>
       {cartItems &&
-          cartItems.map((item) => {
+          cartItems
+          .sort((a, b) => a.id - b.id)
+          .map((item) => {
             return <p>{item.id} with {item.quantity}</p>
             // {console.log("item", item.id)}
           })}
