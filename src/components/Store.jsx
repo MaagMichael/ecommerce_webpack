@@ -11,7 +11,7 @@ export function Store() {
     <div>
       <div>
         {isOpen ? <p>Your orders are:</p> : null}
-        {isOpen ? <Modal items={cartItems} /> : null}
+        {isOpen ? <Modal items={cartItems} quantity={cartQuantity}/> : null}
         {isOpen ? <Modal2 /> : null}
       </div>
       <div className="card_section">

@@ -16,6 +16,7 @@ export function Modal2() {
             return <p>{item.id} with {item.quantity}</p>
             // {console.log("item", item.id)}
           })}
+      <p>In total {cartQuantity}</p>
        
         
         
