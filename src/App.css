@@ -2,10 +2,12 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* position:fixed;
-    top:0; */
+  position: fixed;
+  top: 0;
   width: 100%;
   min-height: 3rem;
+  background-color: cornflowerblue;
+  opacity: .6;
 }
 nav button {
   width: 2.5rem;
@@ -67,4 +69,8 @@ nav .cart_quantity {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.store {
+  margin-top: 5rem;
 }

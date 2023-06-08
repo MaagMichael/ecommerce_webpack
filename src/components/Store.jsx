@@ -8,7 +8,7 @@ export function Store() {
   const { isOpen, cartItems, cartQuantity } = useShoppingCart();
 
   return (
-    <div>
+    <div className="store">
       <div>
         {isOpen ? <p>Your orders are:</p> : null}
         {isOpen ? <Modal items={cartItems} quantity={cartQuantity}/> : null}
